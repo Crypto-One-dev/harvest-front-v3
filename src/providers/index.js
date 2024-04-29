@@ -10,7 +10,6 @@ import { StatsProvider } from './Stats'
 import { ThemeProvider } from './useThemeContext'
 import { VaultsProvider } from './Vault'
 import { WalletProvider } from './Wallet'
-import { EnsoProvider } from './Enso'
 
 const injected = injectedModule()
 const gnosis = gnosisModule()
@@ -94,9 +93,7 @@ const Providers = ({ children }) => (
           <VaultsProvider>
             <ActionsProvider>
               <StatsProvider>
-                <EnsoProvider>
-                  <ThemeProvider>{children}</ThemeProvider>
-                </EnsoProvider>
+                <ThemeProvider>{children}</ThemeProvider>
               </StatsProvider>
             </ActionsProvider>
           </VaultsProvider>
